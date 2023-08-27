@@ -7,27 +7,36 @@ package com.javaCodingQuestions;
 public class Q5 {
 
 	public static void main(String[] args) {
-		
 		String inputWord = "Apple";
 		String inputSentence = "The apple fell from the tree";
 		
-		
-		
-		String wordResult = "";
+		//word solution using -> charAt
+		String reversedWord = "";
 		for(int i = 1; i <= inputWord.length(); i++) {
 			char lastChar = inputWord.charAt(inputWord.length()-i);
-			wordResult += lastChar;
+			reversedWord += lastChar;
 		}
-		System.out.println(wordResult);
+		System.out.println("word solution using -> charAt\n"+reversedWord);
+		
+		System.out.println();//spacer
+		
+		//word solution using -> StringBuffer
+		String reversedWordSB = "";
+		StringBuffer sb = new StringBuffer(inputWord);
+		reversedWordSB = sb.reverse().toString();
+		System.out.println("word solution using -> StringBuffer\n"+reversedWordSB);
 		
 		
+		System.out.println("\n");//spacer
 		
-		String sentenceResult = "";
+		
+		//sentence solution
+		String reversedSentence = "";
 		String[] words = inputSentence.split(" ");
 		for(int i = words.length-1; i >= 0; i--) {
-			sentenceResult += words[i] + "\s";
+			reversedSentence += words[i] + "\s";
 		}
-		System.out.println(sentenceResult);
+		System.out.println("sentence solution: "+reversedSentence);
 	}
 	
 }

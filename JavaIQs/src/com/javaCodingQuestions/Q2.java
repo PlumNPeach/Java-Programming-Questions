@@ -7,9 +7,9 @@ public class Q2 {
 
 	public static void main(String[] args) {
 		
-		int numInQuestion = 16;
+		int numInput = 12;
 		
-		if(isPrime(numInQuestion)) {
+		if(isPrime(numInput)) {
 			System.out.println("number is prime");
 		}else {
 			System.out.println("number is not prime");
@@ -19,7 +19,11 @@ public class Q2 {
 	
 	
 	static boolean isPrime(int num) {
-		for(int i = num-1; i > 1; i--) {
+		if(num == 1) {
+			return false;
+		}
+		
+		for(int i = (int)Math.sqrt(num); i > 1; i--) { // check sqrt, it returns valid info of prime or not and is faster
 			if(num % i == 0) {
 				return false;
 			}

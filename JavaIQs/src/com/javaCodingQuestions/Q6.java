@@ -11,23 +11,22 @@ public class Q6 {
 		int inputNum = 1551;
 		
 		if(isPalindrome(inputWord)) {
-			System.out.println("the word is a palindrome");
+			System.out.println("\""+inputWord+"\""+" is a palindrome");
 		}else {
-			System.out.println("the word is not a palindrome");
+			System.out.println("\""+inputWord+"\""+" is not a palindrome");
 		}
 		
 		
 		if(isPalindrome(inputNum)) {
-			System.out.println("the number is a palindrome");
+			System.out.println("\""+inputNum+"\""+" is a palindrome");
 		}else {
-			System.out.println("the number is not a palindrome");
+			System.out.println("\""+inputNum+"\""+" is not a palindrome");
 		}
 	}
 	
+		
 	
-	
-	
-	// for strings
+	// for strings overload
 	static boolean isPalindrome(String word){
 		word = word.toLowerCase(); 
         int left = 0;
@@ -47,9 +46,7 @@ public class Q6 {
 
 	
 	
-	
-	
-	// for ints
+	// for integers overload
 	static boolean isPalindrome(int num){
 	    int holder = num;
 	    int reversedNum = 0;

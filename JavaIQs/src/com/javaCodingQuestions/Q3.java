@@ -22,14 +22,14 @@ public class Q3 {
 		
 		for(int i = 0; i < amount; i++) {
 			
-			int holder = num2;
-			num2 = num1 + num2;
-			num1 = holder;
+			int next = num1 + num2;
+			num1 = num2;
+			num2 = next;
 			
 			numList.add(num1);
 			
 		}
-		System.out.println(num1);
+		System.out.println(num1); //number at the amount index
 		return numList;
 	}
 }

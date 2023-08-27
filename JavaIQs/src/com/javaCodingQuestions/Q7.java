@@ -7,22 +7,21 @@ package com.javaCodingQuestions;
 public class Q7 {
 	public static void main(String[] args) {
 		int[] newIntArr = {4,1,5,2,6,9,8,7};
-		int largestValue = 0;
-		int secondLargestValue = 0;
+		int largestValue = Integer.MIN_VALUE;
+		int secondLargestValue = Integer.MIN_VALUE;
 		int smallestValue = Integer.MAX_VALUE;
-		
-		for(int num : newIntArr) {
-			if(num > largestValue) {
-				largestValue = num;
-			}
-			
-			if(num > secondLargestValue && num != largestValue) {
-				secondLargestValue = num;
-			}
-			
-			if(num < smallestValue) {
-				smallestValue = num;
-			}
+
+		for (int num : newIntArr) {
+		    if (num > largestValue) {
+		        secondLargestValue = largestValue;
+		        largestValue = num;
+		    } else if (num > secondLargestValue && num != largestValue) {
+		        secondLargestValue = num;
+		    }
+
+		    if (num < smallestValue) {
+		        smallestValue = num;
+		    }
 		}
 		
 		System.out.println("largest value: "+largestValue);
